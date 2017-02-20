@@ -31,6 +31,18 @@ void AEquipment::Tick( float DeltaTime )
 
 }
 
+void AEquipment::DestroyEquipment()
+{
+	GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Red, FString("Todo. Implement Equipment destruction."));
+	//@todo
+}
+
+void AEquipment::ReviveEquipment(float InitialHealth)
+{
+	GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Red, FString("Todo. Implement Equipment revive."));
+	//@todo
+}
+
 void AEquipment::SetEquipmentHighlight(bool Highlight)
 {
 	if (StaticMeshComponent) {

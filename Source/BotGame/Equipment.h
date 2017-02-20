@@ -32,6 +32,8 @@ private:
 
 	int EquipmentValue;
 
+	bool IsDestroyed;
+
 public:	
 	// Sets default values for this actor's properties
 	AEquipment();
@@ -41,6 +43,12 @@ public:
 	
 	// Called every frame
 	virtual void Tick( float DeltaSeconds ) override;
+		
+	UFUNCTION(BlueprintCallable, Category = "Stats")
+	void DestroyEquipment();
+
+	UFUNCTION(BlueprintCallable, Category = "Stats")
+	void ReviveEquipment(float InitialHealth);
 
 	UFUNCTION(BlueprintCallable, Category = "Bots")
 	void SetBotOwner(ABot* NewOwner) {if(NewOwner){BotOwner = NewOwner;} }
@@ -62,5 +70,7 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Material")
 	void SetEquipmentHighlight(bool Highlight);
-	
+
+	UFUNCTION(BlueprintCallable, Category = "Stats")
+	bool GetIsDestroyed() const { return IsDestroyed;}
 };

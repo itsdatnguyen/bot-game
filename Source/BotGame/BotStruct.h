@@ -9,6 +9,15 @@ class ABot;
 class AEquipment;
 
 UENUM(BlueprintType)
+enum class EAttackMethod : uint8
+{
+	AttackOnSight = 0,
+	StopAttack = 1,
+	PrioritizeTarget = 2,
+	AttackOnlyTarget = 3
+};
+
+UENUM(BlueprintType)
 enum class EEquipmentSpawnMethod : uint8
 {
 	SpawnWithDefaultEquipment = 0,
