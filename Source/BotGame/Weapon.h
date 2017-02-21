@@ -34,6 +34,13 @@ private:
 	FRotator WeaponRotation;
 
 public:
+	AWeapon();
+
+	virtual void BeginPlay() override;
+
+	virtual void Tick(float DeltaSeconds) override;
+
+	
 	UFUNCTION(BlueprintCallable, Category = "Attack")
 	void SetAttacksPerSecond(float Value) { if(Value > 0.f) {AttacksPerSecond = Value;} }
 

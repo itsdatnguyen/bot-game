@@ -45,8 +45,8 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Spawn")
 	ABot* SpawnBotFromInstance(FBotInstance BotInstance, FVector Location, FRotator Rotation, EEquipmentSpawnMethod EquipmentSpawnMethod, ESpawnActorCollisionHandlingMethod SpawnMethod);
 
-	UFUNCTION(BlueprintCallable, Category = "Spawn")
-	UBotPhysicsConstraintComponent* CreatePhysicsConstraintComponent(AActor * RootActor, AActor * AttachedActor, FName ConstraintName);
+	//UFUNCTION(BlueprintCallable, Category = "Spawn")
+	//UBotPhysicsConstraintComponent* CreatePhysicsConstraintComponent(AActor * RootActor, AActor * AttachedActor, FName ConstraintName);
 
 	UFUNCTION(BlueprintCallable, Category = "Gameplay")
 	TArray<ABot*> GetAllBots() const { return AllBots; }

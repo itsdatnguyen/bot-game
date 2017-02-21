@@ -3,6 +3,22 @@
 #include "BotGame.h"
 #include "Weapon.h"
 
+AWeapon::AWeapon()
+{
+
+}
+
+void AWeapon::BeginPlay()
+{
+
+}
+
+void AWeapon::Tick(float DeltaSeconds)
+{
+	switch (AttackMethod) {
+	case EAttackMethod::AttackOnlyTarget:
+		break;
 
 
-
+	}
+}

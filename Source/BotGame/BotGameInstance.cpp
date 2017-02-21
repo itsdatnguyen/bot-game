@@ -23,7 +23,7 @@ void UBotGameInstance::AddBotInstance(ABot* BotActor)
 			for (int x = 0; x < Columns; x++) {
 				AEquipment* CurrentEquipment = BotActor->EquipmentGrid.Rows[y].Columns[x];
 				if (CurrentEquipment) {
-					NewBotInstance.EquipmentClassGrid.Rows[y].Columns[x] = CurrentEquipment->GetActorClass();
+					NewBotInstance.EquipmentClassGrid.Rows[y].Columns[x] = CurrentEquipment->GetClass();
 				}
 			}
 		}	

@@ -171,7 +171,7 @@ ABot* ABotGameModeBase::SpawnBotFromInstance(FBotInstance BotInstance, FVector L
 	return Bot;
 }
 
-
+/*
 UBotPhysicsConstraintComponent * ABotGameModeBase::CreatePhysicsConstraintComponent(AActor * RootActor, AActor * AttachedActor, FName ConstraintName)
 {
 	UBotPhysicsConstraintComponent* ConstraintComponent = ConstructObject<UBotPhysicsConstraintComponent>(UBotPhysicsConstraintComponent::StaticClass(), this, ConstraintName);
@@ -198,7 +198,7 @@ UBotPhysicsConstraintComponent * ABotGameModeBase::CreatePhysicsConstraintCompon
 		}
 	}
 	return ConstraintComponent;
-}
+}*/
 
 AEquipment* ABotGameModeBase::SpawnEquipmentForInstance(ABot* Bot, TSubclassOf<AEquipment> EquipmentClass, FRotator Rotation, FVector RelativeLocation)
 {
