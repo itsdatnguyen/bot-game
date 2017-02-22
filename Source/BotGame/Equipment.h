@@ -19,6 +19,14 @@ public:
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
 	FEquipmentPreviewStruct PreviewStruct;
 
+	// The name of the equipment. Must be public and have UPROPERTY
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	FText EquipmentName;
+
+	// The value of the equipment. Must be public and have UPROPERTY
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	int EquipmentValue;
+
 	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
 	FEquipmentStatStruct BaseStats;
 
@@ -27,10 +35,6 @@ public:
 
 private:
 	ABot* BotOwner;
-
-	FString EquipmentName;
-
-	int EquipmentValue;
 
 	bool IsDestroyed;
 
@@ -55,18 +59,6 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = "Stats")
 	ABot* GetBotOwner() const {return BotOwner;}
-
-	UFUNCTION(BlueprintCallable, Category = "Stats")
-	void SetEquipmentName(FString Name) { EquipmentName = Name; }
-
-	UFUNCTION(BlueprintCallable, Category = "Stats")
-	FString GetEquipmentName() const { return EquipmentName; }
-
-	UFUNCTION(BlueprintCallable, Category = "Stats")
-	void SetEquipmentValue(int Value) { if(Value > 0) { EquipmentValue = Value; } }
-
-	UFUNCTION(BlueprintCallable, Category = "Stats")
-	int GetEquipmentValue() const { return EquipmentValue; }
 
 	UFUNCTION(BlueprintCallable, Category = "Material")
 	void SetEquipmentHighlight(bool Highlight);

@@ -16,7 +16,7 @@ AGameTickManager::AGameTickManager()
 void AGameTickManager::BeginPlay()
 {
 	Super::BeginPlay();
-	GetWorld()->GetTimerManager.SetTimer(TickHandle, AGameTickManager::GameTick, TimerDelay, false, 0.f);
+	//GetWorld()->GetTimerManager.SetTimer(TickHandle, AGameTickManager::GameTick, TimerDelay, false, 0.f);
 }
 
 // Called every frame
@@ -25,10 +25,10 @@ void AGameTickManager::Tick(float DeltaTime)
 	Super::Tick(DeltaTime);
 
 }
-
+/*
 void AGameTickManager::GameTick()
 {
-	for (IGameTickable Tickable : TickableObjects) {
+	for (IGameTickable* Tickable : TickableObjects) {
 		if (Tickable) {
 			Tickable->GameTick(TimerDelay);
 		}
@@ -52,3 +52,4 @@ void AGameTickManager::RemoveTickableObject(IGameTickable* Object)
 	TickableObjects.RemoveSingle(Object);
 }
 
+*/

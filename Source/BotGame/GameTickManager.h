@@ -25,7 +25,7 @@ private:
 	float TimerDelay = 0.1f;
 
 	// Array of objects that will be ticked
-	TArray<IGameTickable*> TickableObjects;
+	//TArray<IGameTickable*> TickableObjects;
 
 protected:
 	// Called when the game starts or when spawned
@@ -43,9 +43,9 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "Tick")
 	float GetTimerDelay() const {return TimerDelay;}
 
-	UFUNCTION(BlueprintCallable, Category = "Tick")
-	void RegisterTickableObject(IGameTickable* Object);
+	//UFUNCTION(BlueprintCallable, Category = "Tick")
+	//void RegisterTickableObject(IGameTickable* Object);
 	
-	UFUNCTION(BlueprintCallable, Category = "Tick")
-	void RemoveTickableObject(IGameTickable* Object);
+	//UFUNCTION(BlueprintCallable, Category = "Tick")
+	//void RemoveTickableObject(IGameTickable* Object);
 };

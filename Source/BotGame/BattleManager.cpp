@@ -68,6 +68,7 @@ void ABattleManager::SpawnBots()
 	if (GameInstance && GameMode) {
 		for (int Index : GameInstance->GetSelectedBotIndices()) {
 			if (Index < GameInstance->BotInstanceArray.Num()) {
+
 				GameMode->SpawnBotFromInstance(GameInstance->BotInstanceArray[Index], Location, Rotation, EquipmentSpawnMethod, ActorCollisionMethod);
 			}
 		}

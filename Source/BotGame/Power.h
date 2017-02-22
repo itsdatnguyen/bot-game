@@ -12,8 +12,10 @@ UCLASS()
 class BOTGAME_API APower : public AEquipment
 {
 	GENERATED_BODY()
-	
-	
+
+public:
+	UPROPERTY(BlueprintReadWrite, EditAnywhere, Category = "Stats")
+	int Power;
 	
 	
 };
