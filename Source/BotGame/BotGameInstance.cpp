@@ -31,7 +31,7 @@ void UBotGameInstance::AddBotInstance(ABot* BotActor)
 	}
 }
 
-void UBotGameInstance::UpdateGameInstance(TArray<ABot*> BotsToUpdate, bool OverwriteExisting)
+void UBotGameInstance::UpdateBotInstance(TArray<ABot*> BotsToUpdate, bool OverwriteExisting)
 {
 	if (OverwriteExisting) {
 		BotInstanceArray.Empty();
@@ -44,7 +44,7 @@ void UBotGameInstance::UpdateGameInstance(TArray<ABot*> BotsToUpdate, bool Overw
 	}
 }
 
-void UBotGameInstance::UpdateGameInstance(TArray<AActor*> BotsToUpdate, bool OverwriteExisting)
+void UBotGameInstance::UpdateBotInstances(TArray<AActor*> BotsToUpdate, bool OverwriteExisting)
 {
 	if (OverwriteExisting) {
 		BotInstanceArray.Empty();

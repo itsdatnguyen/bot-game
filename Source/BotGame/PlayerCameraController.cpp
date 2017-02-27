@@ -180,7 +180,7 @@ void APlayerCameraController::SelectEquipment(FHitResult Hit)
 	if (Hit.Actor.IsValid()) {
 		AEquipment* HitEquipment = Cast<AEquipment>(Hit.Actor.Get());
 
-		// If the hit equipment is valid and it is not the currently selected equipment
+		// If the hit equipment is valid and it is not the currently selected equipment 
 		if (HitEquipment != SelectedEquipment)
 		{
 			if (HitEquipment) {
@@ -188,7 +188,9 @@ void APlayerCameraController::SelectEquipment(FHitResult Hit)
 					SelectedEquipment->SetEquipmentHighlight(false);
 				}
 				SelectedEquipment = HitEquipment;
-				SelectedEquipment->SetEquipmentHighlight(true);
+				if (SelectedEquipment) {
+					SelectedEquipment->SetEquipmentHighlight(true);
+				}				
 			}
 			// else if the current selected equipment is valid and the current selected equipment is not equal to the hovered equipment
 			else {

@@ -29,12 +29,10 @@ private:
 
 public:
 	UFUNCTION(BlueprintCallable, Category = "GameInstance")
-	void AddBotInstance(ABot* BotActor);
+	void UpdateBotInstance(TArray<ABot*> BotsToUpdate, bool OverwriteExisting);
 
 	UFUNCTION(BlueprintCallable, Category = "GameInstance")
-	void UpdateGameInstance(TArray<ABot*> BotsToUpdate, bool OverwriteExisting);
-
-	void UpdateGameInstance(TArray<AActor*> BotsToUpdate, bool OverwriteExisting);
+	void UpdateBotInstances(TArray<AActor*> BotsToUpdate, bool OverwriteExisting);
 
 	// Selected Bot Indices functions
 	UFUNCTION(BlueprintCallable, Category = "GameInstance")
@@ -46,5 +44,6 @@ public:
 	UFUNCTION(BlueprintCallable, Category = "GameInstance")
 	TArray<int> GetSelectedBotIndices() const { return SelectedBotIndices; }
 
-	
+private:
+	void AddBotInstance(ABot* BotActor);
 };

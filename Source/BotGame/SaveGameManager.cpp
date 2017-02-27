@@ -49,7 +49,7 @@ void ASaveGameManager::SaveGame(FString SaveName)
 
 		GEngine->AddOnScreenDebugMessage(-1, 2, FColor::Green, FString::Printf(TEXT("wtf %d"), Actors.Num()));
 
-		GameInstance->UpdateGameInstance(Actors, true);
+		GameInstance->UpdateBotInstances(Actors, true);
 
 		SaveGame->FillSaveGame(GameInstance->PlayerStats, GameInstance->BotInstanceArray);
 
